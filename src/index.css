@@ -43,9 +43,20 @@ header h1 {
 header p {
   margin: 0;
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #767311;
   font-family: "Roboto Condensed", sans-serif;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
 }
+
+.etiqanWriting {
+  background-image: linear-gradient(40deg, #eaff00, #cee619, #ff8903, #ff0303);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* color | offset-x | offset-y | blur-radius */
+  text-shadow:#ffffff 1px 0 50px;
+}
+
 
 main {
   width: 90%;
