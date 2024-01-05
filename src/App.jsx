@@ -1,37 +1,25 @@
-import reactImage from './assets/etiqa.svg'
 import componentsImg from './assets/components.png'
-
+import Header from './components/Header/Header.jsx'
+import CoreConcept from './components/CoreConcept.jsx'
+import TabButton from './components/TabButton.jsx';
 import { CORE_CONCEPTS } from './data.js';
-
-function Header(){
-  return (
-      <header>
-        <img src={reactImage}
-        alt="Stylized atom" />
-        <h1>E T I Q A N </h1>
-        <p>
-          What does it mean to be an <span className="etiqanWriting">ETIQAN?</span>  🤔💭
-        </p>
-      </header>
-  );
-}
-
-function CoreConcept({image,title,description}){
-  return (
-  <li>
-    <img src={image} alt={title}/>
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </li>
-  );
-}
+import { Component } from 'react';
 
 function App() {
+
+  const buttonNames = ["Ethical", "Inclusive", "Question", "Authentic", "Trustworthy", "Nurturing"];
+
+  function handleClick(selectedButton){
+    // selectedButton => 'tabThatWasClicked'
+    console.log("click handled from app.jsx: ", selectedButton);
+  }
+
   return (
     <div>
       <Header></Header>
       <main>
-        <h2>Lets find out !n</h2>
+        <h2>Lets find out !</h2>
+        <h4 style={{textAlign:'center'}}>(reminder to change svgs)</h4>
         <section id='core-concepts'>
           <h2 className='coreCepts'> Core Concepts </h2>
           <ul>
@@ -43,9 +31,29 @@ function App() {
             {...CORE_CONCEPTS[2]}/>
             <CoreConcept
             {...CORE_CONCEPTS[3]}/>
-            <CoreConcept/>
-            <CoreConcept/>
+            <CoreConcept {...CORE_CONCEPTS[4]}/>
+            <CoreConcept {...CORE_CONCEPTS[5]}/>
           </ul>
+        </section>
+
+        <section id='examples'>
+          <h2>Examples</h2>
+
+
+          <menu>  
+          {buttonNames.map( name =>
+            <TabButton 
+              key = {name}
+              buttonName = {name}
+              onClickOfButton = { () => handleClick({name})}
+              />
+           )}
+              {/*Previous Implementation
+              <TabButton 
+              buttonName="Inclusive"
+              onClickOfButton = {handleClick}/> */}
+          </menu>
+          {/* Where the dynamic content goes */}
         </section>
       </main>
     </div>

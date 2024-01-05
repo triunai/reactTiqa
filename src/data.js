@@ -5,27 +5,40 @@ import stateImg from './assets/state-mgmt.png';
 
 export const CORE_CONCEPTS = [
   {
-    image: componentsImg,
-    title: 'Components',
+    image: componentsImg, // change this
+    title: 'Ethical',
     description:
-      'The core UI building block - compose the user interface by combining multiple components.',
+      'Strive to make profits from work that benefits humanity, emphasizing the importance of ethical practices in professional life.',
+  },
+  {
+    image: jsxImg, // change this
+    title: 'Inclusive',
+    description:
+      'Foster an environment where business partners and stakeholders can grow and succeed together.',
+  },
+  {
+    image: propsImg, // change this
+    title: 'Questing',
+    description:
+      'Embrace continuous learning and intellectual curiosity, never stopping in the quest for knowledge and improvement.',
+  },
+  {
+    image: jsxImg, // change this
+    title: 'Authentic',
+    description:
+      'Practice candour and authenticity, being true to oneself and others to cultivate genuine relationships.',
   },
   {
     image: jsxImg,
-    title: 'JSX',
+    title: 'Trustworthy',
     description:
-      'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
+      'Provide fast and easy service with the best advice, ensuring reliability and building trust in all interactions.',
   },
   {
-    image: propsImg,
-    title: 'Props',
+    image: jsxImg, // change this
+    title: 'Nurturing',
     description:
-      'Make components configurable (and therefore reusable) by passing input data to them.',
+      'Treat customers like family, nurturing relationships and providing support beyond mere transactions.',
   },
-  {
-    image: stateImg,
-    title: 'State',
-    description:
-      'React-managed data which, when changed, causes the component to re-render & the UI to update.',
-  },
+
 ];
