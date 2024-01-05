@@ -9,7 +9,7 @@ html {
   line-height: 1.5;
 
   color: #efe8e7;
-  background: radial-gradient(#b8bda3, #f3f1f4);
+  background: radial-gradient(#999277, #f3f1f4);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -48,6 +48,7 @@ header p {
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+/* Span for etiqan in the p tag above */
 .etiqanWriting {
   background-image: linear-gradient(40deg, #eaff00, #cee619, #ff8903, #ff0303);
   -webkit-background-clip: text;
@@ -67,8 +68,12 @@ main {
 #core-concepts {
   padding: 2rem;
   border-radius: 6px;
-  background-color: #140524;
+  background-color: #d2d2bc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.coreCepts{
+  color: #2c0f4b;
 }
 
 main h2 {
