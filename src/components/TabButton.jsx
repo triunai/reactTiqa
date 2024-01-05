@@ -1,6 +1,5 @@
 export default function TabButton({buttonName, onClickOfButton}){
 
-
     // remove this
     function clickHandler(){
         console.log("From the component itself")
