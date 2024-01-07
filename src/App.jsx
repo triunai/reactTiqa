@@ -1,22 +1,24 @@
-import { useState } from 'react' 
-import componentsImg from './assets/components.png'
+import { useState } from 'react'; 
+import componentsImg from './assets/components.png';
 import Header from './components/Header/Header.jsx'
-import CoreConcept from './components/CoreConcept.jsx'
+import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 import { CORE_CONCEPTS } from './data.js';
 import { Component } from 'react';
 
 function App() {
+  
+  const [ selectedTopic, setSelectedTopic ] = useState('Please click a relevant button -useState');
 
   let tabContent = 'Please click a relevant button';
   const buttonNames = ["Ethical", "Inclusive", "Question", "Authentic", "Trustworthy", "Nurturing"];
-
+  
   function handleClick(selectedButton){
     // selectedButton => 'tabThatWasClicked'
-    tabContent ='';
-    tabContent = selectedButton;
+    
+    setSelectedTopic(selectedButton);
 
-    console.log("click handled from app.jsx: ", selectedButton);
+    console.log(selectedTopic);
   }
 
   return (
@@ -54,7 +56,7 @@ function App() {
             <TabButton 
               key = {name}
               buttonName = {name}
-              onClickOfButton = { () => handleClick({name})}
+              onClickOfButton = { () => handleClick(name)}
               />
            )}
               {/*Previous Implementation
@@ -65,7 +67,7 @@ function App() {
               }
           </menu>
           {/* Where the dynamic content goes */}
-          {tabContent}
+          {selectedTopic}
         </section>
       </main>
     </div>
