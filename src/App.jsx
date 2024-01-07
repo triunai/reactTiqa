@@ -1,3 +1,4 @@
+import { useState } from 'react' 
 import componentsImg from './assets/components.png'
 import Header from './components/Header/Header.jsx'
 import CoreConcept from './components/CoreConcept.jsx'
@@ -28,6 +29,8 @@ function App() {
         
         <section id='core-concepts'>
           <h2 className='coreCepts'> Core Concepts </h2>
+
+          {/* We have 6 ULs here */}
           <ul>
             <CoreConcept 
             {...CORE_CONCEPTS[0]}/>
