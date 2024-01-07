@@ -42,3 +42,62 @@ export const CORE_CONCEPTS = [
   },
 
 ];
+
+
+export const EXAMPLES = {
+  Ethical: {
+    title: 'Ethical',
+    actionPoints: [
+      'Implement fair trade practices.',
+      'Ensure transparency in all business dealings.',
+      'Promote sustainability and social responsibility.'
+    ],
+    keyPractices: 'Focus on business ethics and corporate social responsibility.'
+  },
+  Inclusive: {
+    title: 'Inclusive',
+    actionPoints: [
+      'Create inclusive marketing campaigns.',
+      'Diversify your team and leadership.',
+      'Foster an inclusive workplace culture.'
+    ],
+    keyPractices: 'Embrace diversity and inclusivity in all aspects of business.'
+  },
+  Questing: {
+    title: 'Questing',
+    actionPoints: [
+      'Cultivate a culture of continuous learning and improvement.',
+      'Encourage curiosity and innovation among team members.',
+      'Invest in training and development programs.'
+    ],
+    keyPractices: 'Pursue knowledge and growth relentlessly.'
+  },
+  Authentic: {
+    title: 'Authentic',
+    actionPoints: [
+      'Be transparent and honest in communications.',
+      'Build genuine relationships with customers and partners.',
+      'Stay true to your brand values and mission.'
+    ],
+    keyPractices: 'Maintain authenticity in every aspect of your business.'
+  },
+  Trustworthy: {
+    title: 'Trustworthy',
+    actionPoints: [
+      'Deliver consistent and reliable services or products.',
+      'Maintain confidentiality and protect customer data.',
+      'Build trust through open and honest communication.'
+    ],
+    keyPractices: 'Earn and maintain trust in every interaction.'
+  },
+  Nurturing: {
+    title: 'Nurturing',
+    actionPoints: [
+      'Provide supportive customer service.',
+      'Create a positive and encouraging environment for employees.',
+      'Engage in community outreach and support.'
+    ],
+    keyPractices: 'Foster growth and development for individuals and the community.'
+  },
+};
+

@@ -3,7 +3,7 @@ import componentsImg from './assets/components.png';
 import Header from './components/Header/Header.jsx'
 import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
-import { CORE_CONCEPTS } from './data.js';
+import { CORE_CONCEPTS, EXAMPLES } from './data.js';
 import { Component } from 'react';
 
 function App() {
@@ -11,8 +11,12 @@ function App() {
   const [ selectedTopic, setSelectedTopic ] = useState('Please click a relevant button -useState');
 
   let tabContent = 'Please click a relevant button';
-  const buttonNames = ["Ethical", "Inclusive", "Question", "Authentic", "Trustworthy", "Nurturing"];
   
+  // initialization of arrays
+  const buttonNames = ["Ethical", "Inclusive", "Question", "Authentic", "Trustworthy", "Nurturing"];
+  const selectedExample = EXAMPLES[selectedTopic] || {};
+
+
   function handleClick(selectedButton){
     // selectedButton => 'tabThatWasClicked'
     
@@ -66,8 +70,15 @@ function App() {
               */
               }
           </menu>
-          {/* Where the dynamic content goes */}
-          {selectedTopic}
+          <div id = 'tab-content'>
+              <h3>{selectedExample.title}</h3>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p></p>
+          </div>
         </section>
       </main>
     </div>
