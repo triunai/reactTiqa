@@ -46,12 +46,17 @@ function App() {
         <section id="core-concepts">
           <h2 className="coreCepts"> Core Concepts </h2>
           <ul>
-            <CoreConcept {...CORE_CONCEPTS[0]} />
+            {CORE_CONCEPTS.map((concepts) => 
+            <CoreConcept {...concepts}/> )}
+
+            {/* Previous hardcoded implementation */}
+
+            {/* <CoreConcept {...CORE_CONCEPTS[0]} />
             <CoreConcept {...CORE_CONCEPTS[1]} />
             <CoreConcept {...CORE_CONCEPTS[2]} />
             <CoreConcept {...CORE_CONCEPTS[3]} />
             <CoreConcept {...CORE_CONCEPTS[4]} />
-            <CoreConcept {...CORE_CONCEPTS[5]} />
+            <CoreConcept {...CORE_CONCEPTS[5]} /> */}
           </ul>
         </section>
 
