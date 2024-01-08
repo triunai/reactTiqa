@@ -7,7 +7,6 @@ import { Header, CoreConcept, TabButton, TabContent } from "./components";
 // domain model imports
 import { CORE_CONCEPTS, EXAMPLES } from "./data.js";
 
-
 function App() {
   // Lifecycle hooks begin here
   const [selectedTopic, setSelectedTopic] = useState();
@@ -31,7 +30,6 @@ function App() {
     console.log(selectedTopic);
   }
 
-
   // Actual HTML implementation
 
   return (
@@ -41,13 +39,19 @@ function App() {
 
       <main>
         <h2>Lets find out !</h2>
-        <h4 style={{ textAlign: "center" }}>(reminder to change svgs)</h4>
-
         <section id="core-concepts">
           <h2 className="coreCepts"> Core Concepts </h2>
           <ul>
-            {CORE_CONCEPTS.map((concepts) => 
-            <CoreConcept {...concepts}/> )}
+            {CORE_CONCEPTS.map((concepts) => (
+              <CoreConcept 
+              key={concepts.title}
+              {...concepts} />
+            ))}
+            {/*<CoreConcept 
+                  title={concept.title}
+                  description={concept.description}
+                  image={concept.image}
+            /> */}
 
             {/* Previous hardcoded implementation */}
 
@@ -69,8 +73,7 @@ function App() {
                 key={name}
                 buttonName={name}
                 onClickOfButton={() => handleClick(name)}
-                isSelected = {selectedTopic === name
-                }
+                isSelected={selectedTopic === name}
               />
             ))}
             {/*Previous Implementation
@@ -98,7 +101,7 @@ function App() {
           {!selectedTopic ? (
             <p>Please select a relevant topic</p>
           ) : (
-            <TabContent example = {EXAMPLES[selectedTopic]} />
+            <TabContent example={EXAMPLES[selectedTopic]} />
           )}
         </section>
       </main>

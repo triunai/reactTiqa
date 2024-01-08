@@ -62,7 +62,7 @@ main h2 {
 #core-concepts li img {
   height: 4rem;
   width: 6rem;
-  object-fit: cover;
+  object-fit: contain;    /* Changed this to contain */
 }
 
 #core-concepts li h3 {
