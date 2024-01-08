@@ -1,4 +1,4 @@
-export default function TabButton({buttonName, onClickOfButton}){
+export default function TabButton({buttonName, onClickOfButton, isSelected}){
 
     // remove this
     function clickHandler(){
@@ -6,6 +6,10 @@ export default function TabButton({buttonName, onClickOfButton}){
     }
 
     return (
-        <li><button onClick={onClickOfButton}>{buttonName}</button></li>
+        <li>
+            <button
+            className={isSelected ? "active" : undefined} 
+            onClick={onClickOfButton}>{buttonName}</button>
+        </li>
     );
 }
