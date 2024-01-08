@@ -44,6 +44,12 @@ main h2 {
   color: #5f6158;
 }
 
+
+.letsfindout{
+  text-align: center !important;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 #core-concepts ul {
   list-style: none;
   padding: 0;
