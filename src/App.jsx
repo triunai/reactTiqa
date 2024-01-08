@@ -1,22 +1,22 @@
+// react imports
 import { useState } from 'react'; 
-import componentsImg from './assets/components.png';
+import { Component } from 'react';
+// component imports
 import Header from './components/Header/Header.jsx'
 import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
+// domain model imports
 import { CORE_CONCEPTS, EXAMPLES } from './data.js';
-import { Component } from 'react';
 
 function App() {
   
-  const [ selectedTopic, setSelectedTopic ] = useState('Please click a relevant button -useState');
+  // Lifecycle hooks begin here
+  const [ selectedTopic, setSelectedTopic ] = useState();
 
-  let tabContent = 'Please click a relevant button';
-  
   // initialization of arrays
-  const buttonNames = ["Ethical", "Inclusive", "Question", "Authentic", "Trustworthy", "Nurturing"];
-  const selectedExample = EXAMPLES[selectedTopic] || {};
+  const buttonNames = ["Ethical", "Inclusive", "Questing", "Authentic", "Trustworthy", "Nurturing"];
 
-
+  // function to handle tabButtons
   function handleClick(selectedButton){
     // selectedButton => 'tabThatWasClicked'
     
@@ -25,9 +25,13 @@ function App() {
     console.log(selectedTopic);
   }
 
+  // Actual HTML implementation 
+
   return (
     <div>
+      {/* Etiqa Header */}
       <Header></Header>
+
       <main>
 
         <h2>Lets find out !</h2>
@@ -35,8 +39,6 @@ function App() {
         
         <section id='core-concepts'>
           <h2 className='coreCepts'> Core Concepts </h2>
-
-          {/* We have 6 ULs here */}
           <ul>
             <CoreConcept 
             {...CORE_CONCEPTS[0]}/>
@@ -55,7 +57,8 @@ function App() {
 
         <section id='descriptions'>
           <h2>Descriptions</h2>
-          <menu>  
+          <menu> 
+           {/* Random code, ask if right  */}
           {buttonNames.map( name =>
             <TabButton 
               key = {name}
@@ -70,16 +73,21 @@ function App() {
               */
               }
           </menu>
-          <div id = 'tab-content'>
-              <h3>{selectedExample.title}</h3>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <p></p>
-          </div>
+
+          {/* Checks if state is false, then asks you to pick button, conditional rendering */}
+          {!selectedTopic ? <p>Please select a relevant topic</p> 
+          : <div id = 'tab-content'>
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <ul>
+            <li>{EXAMPLES[selectedTopic].actionPoints[0]}</li>
+            <li>{EXAMPLES[selectedTopic].actionPoints[1]}</li>
+            <li>{EXAMPLES[selectedTopic].actionPoints[2]}</li>
+          </ul>
+          <p>{EXAMPLES[selectedTopic].keyPractices}</p>
+      </div> }
+
         </section>
+
       </main>
     </div>
   );
