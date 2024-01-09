@@ -29,16 +29,19 @@ export default function Descriptions() {
   }
 
   return (
-    <Section title="Descriptions" id="descriptions">
+    <Section 
+    title = "Descriptions" 
+    id = "descriptions">
       <Tabs
-        buttons={
+      buttonsContainer = "menu"
+        buttons = {
           <>
             {buttonNames.map((btnName) => (
               <TabButton
-                key={btnName}
-                buttonName={btnName}
-                onClick={() => handleClick(btnName)}
-                isSelected={selectedTopic === btnName}
+                key = {btnName}
+                buttonName = {btnName}
+                onClick = {() => handleClick(btnName)}
+                isSelected = {selectedTopic === btnName}
               />
             ))}
           </>
